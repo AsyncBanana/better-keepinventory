@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class ServerPlayerEntityMixin {
     @Redirect(method = "copyFrom", at = @At(value = "INVOKE", target = "net/minecraft/world/GameRules.getBoolean(Lnet/minecraft/world/GameRules$Key;)Z"))
     public boolean onCopyFrom(GameRules rules, GameRules.Key<GameRules.BooleanRule> key, ServerPlayerEntity oldPlayer) {
-        return rules.getBoolean(key) && (oldPlayer.getAttacker() == null || oldPlayer.getAttacker().getType() != EntityType.PLAYER);
+        return rules.getBoolean(key)
+                && (oldPlayer.getAttacker() == null || oldPlayer.getAttacker().getType() != EntityType.PLAYER);
     }
 }

@@ -1,6 +1,7 @@
 # Better KeepInventory
 
+## Overview
 Better KeepInventory is a mod that makes it so you only drop loot when killed by players. This helps make servers more engaging by allowing for PVP with looting while still ensuring you don't lose everything after falling into lava. This is currently experimental.
 
-> ### Versions
-> This has only been tested in 1.17.1 as of now, but it will likely work in 1.18 snapshots and 1.16.5
+## Versions
+The officially supported versions are 1.17.1 and 1.19, however, because the mod is so minimal, many other versions should be supported.
