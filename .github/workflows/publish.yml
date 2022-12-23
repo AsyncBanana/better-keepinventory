@@ -3,7 +3,7 @@ name: Publish on Curseforge & Modrinth
 on:
   release:
     types:
-      - released
+      - published
 
 jobs:
   build:
