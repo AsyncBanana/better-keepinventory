@@ -1,0 +1,29 @@
+name: Publish on Curseforge & Modrinth
+
+on:
+  release:
+    types:
+      - released
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Release
+        uses: carlosperate/download-file-action@v2
+        id: download_release
+        with:
+          file-url: "${{github.event.release.assets[0].browser_download_url}}"
+          file-name: "release-${github.event.release.tag_name}.jar"
+      - name: Publish
+        uses: Kir-Antipov/mc-publish@v3.2
+        with:
+          curseforge-id: 549883
+          curseforge-token: "${{env.CURSEFORGE_TOKEN}}"
+
+          modrinth-id: O6cL85Vz
+          modrinth-token: "${{env.MODRINTH_TOKEN}}"
+
+          github-token: "${{env.GITHUB_TOKEN}}"
+
+          files: "${{ steps.download_release.file_path }}"
