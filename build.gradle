@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.0-SNAPSHOT'
+	id 'fabric-loom' version '1.4-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -10,7 +10,7 @@ archivesBaseName = 'better_keepinventory'
 maven_group = 'dev.asyncbanana'
 version = project.mod_version
 group = project.maven_group
-minecraft_version = '1.19.2'
+minecraft_version = '1.20.1'
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
