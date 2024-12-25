@@ -1,20 +1,23 @@
 {
   "schemaVersion": 1,
   "id": "better_keepinventory",
-  "version": "1.3",
+  "version": "1.4",
   "name": "Better Keepinventory",
-  "description": "Makes it so that you only drop loot when keepinventory is on if players kill you",
+  "description": "Makes it so that you only drop loot if players kill you",
   "authors": ["AsyncBanana"],
   "contact": {},
   "license": "MIT",
   "icon": "assets/better_keepinventory/icon.png",
   "environment": "*",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": ["dev.asyncbanana.better_keepinventory.BetterKeepinventory"]
+  },
   "mixins": ["better_keepinventory.mixins.json"],
   "depends": {
-    "fabricloader": ">=0.15.3",
-    "minecraft": "1.20.x",
-    "java": ">=17"
+    "fabricloader": ">=0.16.9",
+    "minecraft": "1.21.x",
+    "java": ">=17",
+    "fabric-api": "*"
   },
   "suggests": {}
 }
